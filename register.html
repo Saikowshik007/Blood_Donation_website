@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/main2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+<script tpye="text/javascript" src="js/all.js"></script>
+<script>window.load="getLocation()";</script>
+</head>
+<body background="images/wall.jpg">
+
+<div class="col-12" style="height: 350px">
+	<div id="comname">
+		<i class="fa fa-balance-scale" aria-hidden="true"></i><br><br>BLOOD <b>DONATION</b>
+	</div>
+		<div style="margin: 0; padding: 10%; text-align: center;">
+	<span class="info" style="font-size: 40px;color: rgb(168, 28, 6);font-weight: bold;">Register</span>
+	<img class="myFrontPic col-12"src="images/img5.jpg" style="height: 350px; opacity: 0.0">
+</div>
+</div>
+	<div class="col-12" style="overflow: auto; padding: 0 20% 0 20%;">
+		<div class="col-12" style="text-align: left; padding: 5%; background-opacity:0;">
+			<form action="register.html" method="post"><p style="color:white;">
+				Email(required)<span style="color: red;">*</span><br>
+				<input class="in" type="email" id="emailf"  name="email" placeholder="Enter Your Email" required style="color: white;"><br><br>
+				Password(required)<span style="color: red;">*</span><br>
+				<input class="in"  id="passwordf" type="password" name="password" placeholder="Password" required style="color: white;"><br><br>
+				Username(required)<span style="color: red;">*</span><br>
+				<input class="in" type="text"  id="namefield" name="username" placeholder="Enter Username" required style="color: white;"><br><br>
+				Last donated on<br>
+				<input class="in" id="ldf" type="date" name="dob" placeholder="dd/mm/yyyy" required><br><br>
+				Age(required)<span style="color: red;">*</span><br>
+				<input class="in"  id="dobf" type="number" name="age" placeholder="Age" required style="color: white;"><br><br>
+				Blood Group(required)<span style="color: red;">*</span><br>
+				<select name="bloodgroup" required id="groupf">
+						<option value="">Enter Blood Group</option>
+						<option value="A+">A+</option>
+						<option value="A-">A-</option>
+						<option value="B+">B+</option>
+						<option value="B-">B-</option>
+						<option value="O+">O+</option>
+						<option value="O-">O-</option>
+						<option value="AB+">AB+</option>
+						<option value="AB-">AB-</option>
+				</select><br><br>
+				Mobile(required)<span style="color: red;">*</span><br>
+				<input class="in"type="text"  id="phonef" name="mobile" placeholder="Enter Mobile No." pattern="[0-9]{10}" required style="color: black;"><br><br></p>
+				<center><button type="button" class="qw" style="font-size: 16px; color: white;"  onclick="getLocation()">Register!</button>
+				<br><br>
+				<button type="button" class="qw" style="font-size: 16px; color: white;"  onclick="load_login()">Login</button></center>
+			</form>
+			</form>
+		</div>
+	</div>
+</div>
+<br><br>
+<footer>
+	<div id="upper" class="col-12">
+        <div style="padding: 40px 70px 40px 70px; color: white;overflow: auto;">
+            <div class="col-3" style="float: left; height: 250px; padding: 10px 40px 10px 20px; font-size: 15px; color: rgb(171, 175, 181);overflow: hidden;text-overflow: ellipsis;">
+                <h5>ABOUT US</h5><p>Students from GITAM UNIVERSITY</p>
+            </div>
+
+            <div class="col-3" style="float: right; height: 250px; padding: 10px;overflow: hidden;text-overflow: ellipsis;">
+                <h5>SOCIAL ICONS</h5><p><a href="https://www.facebook.com/" class="fa fa-facebook"></a><a href="https://twitter.com/login" class="fa fa-twitter"></a><a href="https://aboutme.google.com/u/0/?referer=gplus" class="fa fa-google"></a><a href="https://youtube.com" class="fa fa-youtube"></a><a href="https://instagram.com" class="fa fa-instagram"></a></p>
+            </div>
+
+            
+
+            <div class="col-3" style="float: right; height: 250px; padding: 10px; font-size: 15px; color: rgb(171, 175, 181);overflow: hidden;text-overflow: ellipsis;">
+                <h5>KEEP IN TOUCH</h5><p>GITAM, Visakhapatnam<br><br>(+91) 9515850919 &ensp; ananthulasaikowshik@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div id="lower" class="col-12">
+        2020 All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+<script type="text/javascript">
+	function load_login(){
+		window.location.replace("login.html");
+	}
+</script>
+
+</html>

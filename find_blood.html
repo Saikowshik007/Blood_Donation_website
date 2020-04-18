@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/main2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script src="js/all.js"></script>
+<script src="logout.html"></script>
+<script>window.load=validate();</script><style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+</style>
+
+
+</head>
+<body background="images/wall.jpg">
+
+<div class="col-12" style="height: 350px">
+	<div id="comname">
+		<i class="fa fa-balance-scale" aria-hidden="true"></i><br><br>BLOOD <b>DONATION</b>
+	</div>
+	<div id="nav" class="col-12">
+		<ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="about.html">About</a></li>
+		  <li><a href="contact.html">Contact</a></li>
+		  <li><a href="change_details.html">Change Details</a></li>
+		  <li><a class="active" href="find_blood.html">Find Donor</a></li>
+		  <li><a href="logout.html" onclick="logout()">LogOut</a></li>
+		</ul>
+	</div>
+		<div style="margin: 0; padding: 11%; text-align: center;">
+	<span class="info" style="font-size: 40px;color: rgb(168, 28, 6);font-weight: bold;">Find Donor</span>
+	<img class="myFrontPic col-12"src="images/img5.jpg" style="height: 350px; opacity: 0.0">
+</div>
+	<img class="myFrontPic col-12" src="images/img5.jpg" style="height: 350px;opacity: 0">
+</div>
+	<div id="info" class="col-12">
+		<form>
+				<select name="bloodgroup"  onchange="search();" id="sel">
+						<option value="">Enter Blood Group</option>
+						<option value="A+">A+</option>
+						<option value="A-">A-</option>
+						<option value="B+">B+</option>
+						<option value="B-">B-</option>
+						<option value="O+">O+</option>
+						<option value="O-">O-</option>
+						<option value="AB+">AB+</option>
+						<option value="AB-">AB-</option>
+				</select>
+		</form>
+	</div>
+<div class="w3-container">
+<table class = "w3-table-all w3-card-4" id="table"></table></div>
+<script type="text/javascript">setData()</script>
+</body>
+
+
+</html>

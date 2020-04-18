@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/main2.css" />
+</head>
+<body background="images/wall.jpg">
+
+  <div id="login_div" class="main-div">
+    <h3 style="color: white">Donate blood Save lives....</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Blood donation. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+<center><a href="javascript:void(0);" onclick="reset()">Forgot password?!</a></center>
+<center><a href="register.html">No Account?! Register..</a></center>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+<script type="text/javascript" src="js/all.js"></script>
+
+</body>
+
+</html>
