@@ -291,7 +291,7 @@ function updatedata(){
 	name: name,
     email: email,
     age: age,
-    availability:1,
+    availability:"1",
     location: fcity,
     phone: phone,
     date: lastdonated,
