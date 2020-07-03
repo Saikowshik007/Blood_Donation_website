@@ -269,7 +269,8 @@ document.getElementById("loc").value=location;
 });
 }
 function updatedata(){
-	var name,phone,email,age,lastdonated,group,location,docid;
+	var name,phone,email,age,lastdonated,group,location,docid,availability;
+	availability="1";
 	firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
   	var id=auth.currentUser.uid.toString();
@@ -291,7 +292,7 @@ function updatedata(){
 	name: name,
     email: email,
     age: age,
-    availability:"1",
+    availability:availability,
     location: fcity,
     phone: phone,
     date: lastdonated,
