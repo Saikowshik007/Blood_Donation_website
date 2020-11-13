@@ -270,7 +270,7 @@ document.getElementById("loc").value=location;
 }
 function updatedata(){
 	var name,phone,email,age,lastdonated,group,location,docid;
-	String availability;
+	var availability;
 	availability="1";
 	firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
